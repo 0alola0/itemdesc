@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="დაგვიტოვეთ საკონტაქტო ინფორმაცია და მიიღეთ სპეციალური შეთავაზება."
+    />
+
+    <title>Itemdesc | სპეციალური შეთავაზება</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo" aria-label="Itemdesc მთავარი გვერდი">
+          <img src="./assets/logo.png" alt="Itemdesc" />
+        </a>
+
+        <a href="#offer-form" class="button button--small">
+          მიიღე შეთავაზება
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <div class="hero__badge">
+              <span></span>
+              სპეციალური შეთავაზება
+            </div>
+
+            <h1>
+              მარტივი და ეფექტური
+              <span>გადაწყვეტილება თქვენი ბიზნესისთვის</span>
+            </h1>
+
+            <p class="hero__description">
+              ჩვენ გთავაზობთ თანამედროვე და პრაქტიკულ სერვისს, რომელიც
+              დაგეხმარებათ თქვენი ბიზნესის პროცესების გამარტივებაში. დატოვეთ
+              თქვენი საკონტაქტო ინფორმაცია და ჩვენი წარმომადგენელი
+              დაგიკავშირდებათ დეტალების გასაცნობად.
+            </p>
+
+            <div class="hero__features">
+              <div class="hero__feature">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>მარტივი პროცესი</strong>
+                  <span>შეავსეთ ფორმა რამდენიმე წამში</span>
+                </div>
+              </div>
+
+              <div class="hero__feature">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92C11.61 20.92 4 13.31 4 3.92C4 3.37 4.45 2.92 5 2.92H8C8.55 2.92 9 3.37 9 3.92C9 5.17 9.2 6.37 9.57 7.49C9.72 7.94 9.61 8.44 9.27 8.78L7.38 10.67C8.61 13.09 10.59 15.07 13.01 16.3L14.9 14.41C15.24 14.07 15.74 13.96 16.19 14.11C17.31 14.48 18.51 14.68 19.76 14.68C20.31 14.68 20.76 15.13 20.76 15.68V16.92H22Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>სწრაფი უკუკავშირი</strong>
+                  <span>ჩვენი გუნდი თავად დაგიკავშირდებათ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM CARD -->
+          <div class="offer-card" id="offer-form">
+            <div class="offer-card__header">
+              <h2>მიიღეთ სპეციალური შეთავაზება</h2>
+
+              <span class="offer-card__label"
+                >შეავსეთ ფორმა და ჩვენი წარმომადგენელი დაგიკავშირდებათ.</span
+              >
+            </div>
+
+            <form
+              class="form"
+              id="contactForm"
+              action="https://formspree.io/f/xyezgkgp"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="subject"
+                value="ახალი განაცხადი - Itemdesc"
+              />
+
+              <div class="form__group">
+                <label for="fullName">სახელი და გვარი *</label>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="მაგ. გიორგი გიორგაძე"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="phone">ტელეფონის ნომერი *</label>
+
+                <div class="phone-input">
+                  <span class="phone-input__prefix">+995</span>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="5XX XX XX XX"
+                    inputmode="numeric"
+                    autocomplete="tel-national"
+                    required
+                  />
+                </div>
+
+                <span class="form__error" id="phoneError"></span>
+              </div>
+
+              <div class="form__group">
+                <label for="email">ელ. ფოსტა</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="example@email.com"
+                  autocomplete="email"
+                />
+
+                <span class="form__error" id="emailError"></span>
+              </div>
+
+              <div class="form__group">
+                <label for="company">კომპანია</label>
+
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="კომპანიის დასახელება"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="message">დამატებითი ინფორმაცია</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="მოგვწერეთ, რით ხართ დაინტერესებული..."
+                ></textarea>
+              </div>
+
+              <label class="checkbox">
+                <input type="checkbox" name="consent" required />
+
+                <span class="checkbox__box">
+                  <!-- your SVG -->
+                </span>
+
+                <span>
+                  ვეთანხმები, რომ კომპანია დამიკავშირდეს ჩემს მიერ მითითებულ
+                  საკონტაქტო მონაცემებზე.
+                </span>
+              </label>
+
+              <button class="button button--full" type="submit">
+                შეთავაზების მიღება
+              </button>
+
+              <div
+                class="form-message"
+                id="formMessage"
+                role="status"
+                aria-live="polite"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / BENEFITS -->
+      <section class="about">
+        <div class="container">
+          <div class="section-heading">
+            <span>რატომ ჩვენ?</span>
+
+            <h2>მარტივი სერვისი, რომელიც შექმნილია თქვენი საჭიროებებისთვის</h2>
+
+            <p>
+              ჩვენი მიზანია შემოგთავაზოთ მოქნილი და მოსახერხებელი გადაწყვეტა
+              ზედმეტი სირთულეების გარეშე.
+            </p>
+          </div>
+
+          <div class="benefits">
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2L15 8.5L22 9.3L17 14.2L18.4 21L12 17.5L5.6 21L7 14.2L2 9.3L9 8.5L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <h3>ხარისხიანი მომსახურება</h3>
+
+              <p>
+                თითოეულ მომხმარებელს ვთავაზობთ ინდივიდუალურ მიდგომასა და მის
+                საჭიროებებზე მორგებულ მომსახურებას.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 8V12L15 15M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+
+              <h3>სწრაფი კომუნიკაცია</h3>
+
+              <p>
+                განაცხადის მიღების შემდეგ ჩვენი გუნდი უმოკლეს დროში
+                დაგიკავშირდებათ.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M8 12L10.7 14.7L16 9.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <h3>მარტივი პირობები</h3>
+
+              <p>
+                ინფორმაცია წარმოდგენილია მარტივად და გასაგებად, ფარული
+                პირობებისა და ზედმეტი ბიუროკრატიის გარეშე.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta__inner">
+            <div>
+              <span class="cta__label">დაინტერესდით?</span>
+
+              <h2>მიიღეთ თქვენზე მორგებული შეთავაზება</h2>
+
+              <p>დატოვეთ თქვენი მონაცემები და ჩვენ თავად დაგიკავშირდებით.</p>
+            </div>
+
+            <a href="#offer-form" class="button button--white">
+              შეავსე ფორმა
+
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12H19M13 6L19 12L13 18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#" class="logo logo--footer">
+          <img src="./assets/logo.png" alt="Itemdesc" />
+        </a>
+
+        <p>© <span id="currentYear"></span> Itemdesc. ყველა უფლება დაცულია.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
